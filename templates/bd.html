@@ -1,0 +1,90 @@
+<html>
+    <head>
+        {% include "index.html" %}
+        <title>Bonafide</title>
+        <p style="text-align: center;
+        color: rgb(246 237 237);
+        font-family: courier;
+        font-size: 257%;">
+            <b>
+                BONAFIDE CERTIFICATE DETAILS
+            </b>
+        </p>
+        <style>
+            .mb-3{
+                {% comment %} text-align:center; {% endcomment %}
+                width:50%;
+                margin-left:25%;
+            }
+            .mb-4{
+              margin-left:25%;
+            }
+            h1 {
+              color: blue;
+              font-family: verdana;
+              font-size: 300%;
+            
+            }
+            p  {
+              color:rgb(231, 107, 107);
+              font-family: courier;
+              font-size: 160%;
+            }
+            
+            
+            body {
+              {% comment %} background-color: powderblue; {% endcomment %}
+              background:url(https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zMDktYWV3LTAxM18xXzEuanBn.jpg);
+              background-repeat: no-repeat;
+              background-size: cover;
+              color:white;
+
+            }
+            h1 {
+              color: blue;
+            }
+            p {
+              text-align:center;
+              color:rgb(231, 107, 107);
+              font-family: courier;
+              font-size: 160%;
+            }
+            </style>
+ 
+    </head>
+    <body>
+      <form method = "POST" action={% url 'bd' %}>
+        {% csrf_token %}
+    {% comment %} <label>Name</label>
+    <input type = "text" name = "sname"><br><br>
+    <label>Reg No</label>
+    <input type = "text" name = "regno"><br><br>
+    <label>Branch</label>
+    <input type = "text" name = "branch"><br><br>
+    <input type = "submit" value = "Submit"> {% endcomment %}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">FULL NAME</label>
+      <input type="text" class="form-control" name = "sname" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text"></div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">CLASS</label>
+        <input type="text" class="form-control" name = "class" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text"></div>
+      </div> 
+      <div class="mb-4">
+      <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+</form> 
+ 
+    </body>
+    <footer>
+      <p style="color: rgb(246 237 237);">
+        {{message}}
+        THANK YOU......
+    </p>   
+    </footer>
+</html>
+    
+
+

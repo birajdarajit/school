@@ -1,0 +1,44 @@
+/* Add your custom CSS here */
+/* For example: */
+
+/* Style for the navigation bar */
+.navbar {
+    background-color: #343a40;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+/* Style for the card section */
+.card {
+    width: 30rem;
+    margin: 20px;
+}
+
+.card-img-top {
+    max-height: 200px;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 24px;
+    color: #007bff;
+}
+
+.card-text {
+    font-size: 18px;
+}
+
+/* Style for the footer section */
+.last {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.lastblack {
+    text-align: center;
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+}

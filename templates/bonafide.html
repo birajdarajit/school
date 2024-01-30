@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bonafide Certificate</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Song+Myung" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        body {
+            background-color: white;
+        }
+
+        .container-cert {
+            {% comment %} border: 6px solid #cd6133; {% endcomment %}
+            {% comment %} padding: 2%; {% endcomment %}
+            text-align: center;
+            background-color: #d5f7d5;
+            {% comment %} margin-top: 5%; {% endcomment %}
+            border-radius: 16px;
+            margin-bottom:0px;
+            margin-top:0px;
+
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Bitter', serif;
+            color: #000000;
+            margin-bottom:0px;
+            margin-top:0px;
+        }
+
+        h2 {
+            font-size: 50px;
+            margin-bottom:0px;
+            margin-top:0px;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: -2px;
+            margin-top:0px;
+        }
+
+        h4 {
+            font-size: 18px;
+            margin-bottom: 0px;
+            margin-top:0px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .btn-primary {
+            margin-top: 0px;
+            margin-bottom:-37px;
+
+        }
+        #class_teacher{
+            display:flex;
+            justify-content:flex-start;
+            align-items:flex-start;
+            width:50%;
+        }
+        .bonafide_h{
+            font-size:37px;
+        }
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left:0px;
+    margin-right:0px;
+   
+}
+
+
+        .principal-info {
+            text-align: right;
+            font-size: 16px;
+            margin-top:0px;
+            display: flex;
+    flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+<div class="container-cert">
+    <h4>School Code: 58.01.071</h4>
+    <h2>Z.P High-School, Vishnupuri</h2>
+    <h3>Taluka.District.NANDED</h3>
+    <h4>Phone.No-02462-229450, E-mail: zphsvishnupuri@gmail.com</h4>
+    <h2 class="bonafide_h">Bonafide Certificate</h2>
+    <h3>It is to certify that Mr/Mrs {{ sname }} resides at Post. {{ address }}, Ta. {{ taluka }} Dist. {{ district }},
+        studying in {{ class }} standard in our school.</h3>
+    <h3>As per our school records, His/Her date of birth: {{ dob }}. This bonafide certificate is given for.</h3>
+    <h3>GR. No.: {{ gr }} &nbsp;&nbsp;&nbsp; Admission Date: {{ doa }}</h3>
+    
+    <div class="row">
+        <div class="col-xs-6" id="class_teacher">
+            <h4>Class Teacher</h4>
+        </div>
+        <div class="col-xs-6 principal-info">
+            <h3>Principal</h3>
+            <h4>Z.P.Highschool Nanded</h4>
+        </div>
+    </div>
+    <a class="btn btn-primary m-2" href="{% url 'bonafide_certificate' %}">Download PDF</a>
+</div>
+<br>
+<br>
+</body>
+</html>

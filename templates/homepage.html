@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    {% include "index.html" %}
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Custom CSS -->
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS for enhanced design */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative; /* Ensure the overlay is positioned relative to the body */
+            background: url("{% static 'schoolimage2.jpeg' %}") no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            z-index: 1; /* Place the overlay below other elements */
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+            transition: background-color 0.5s ease;
+            z-index: 2; /* Place the navbar above the overlay */
+        }
+
+        .navbar:hover {
+            background-color: rgba(0, 0, 0, 0.9) !important;
+        }
+
+        .under_nav {
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 2s;
+            z-index: 3; /* Place the content above the overlay */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .school-title {
+            font-size: 2.5rem;
+            color: #ffffff;
+            animation: fadeIn 2s;
+        }
+
+        .card {
+            margin-top: 160px;
+            margin-left:500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: relative; /* Ensure the card is positioned relative to the overlay */
+            z-index: 3; /* Place the card above the overlay */
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .whitel {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 3; /* Place the content above the overlay */
+        }
+
+        .lastblack {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+    <title>Homepage</title>
+</head>
+
+<body>
+    <div class="overlay"></div> <!-- Add overlay div -->
+
+    <div class="card" style="width: 29rem;">
+        <img src="{% static 'schoolimage.jpg' %}" class="card-img-top" alt="School Card Image">
+        <div class="card-body">
+            <h5 class="card-title text-center">ZP School</h5>
+            <p class="card-text text-center" style="font-size: 1rem;">Welcome & Greetings! Education is the most
+                powerful weapon which you can use to change the world.</p>
+            <a href="/feedback" class="btn btn-primary d-block mx-auto">Student Info</a>
+        </div>
+    </div>
+    
+    {% comment %} <div class="whitel">
+        <div class="last">
+            <!-- Add your footer content here -->
+            <!-- <img src="{% static 'new_footer_sggs.png' %}"> -->
+        </div>
+        <div class="lastblack">
+            <h1>Developed By:</h1>
+            <h2>H&A Developer's</h2>
+            <h3>&copy; All Rights Reserved.</h3>
+        </div>
+    </div> {% endcomment %}
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

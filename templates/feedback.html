@@ -1,0 +1,149 @@
+<htmp <DOCTYPE!>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>feedback</title>
+            {% include "index.html" %}
+            <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  -->
+            
+        <style>
+            body{
+              background-color: rgb(198, 236, 241);
+            }
+            
+             </style> 
+    
+    
+       </head>
+         
+        <body>
+            <h2> <center>ZP School, Nanded</h2></center>
+    <div>
+        <table border=1  color="black" align="center" >
+        <h3><center><font color="black"></font> </h3></center>
+        <hr color="green">
+        <h4> <center> <b><i>ADMISSION INFO </i></b></center> </h4>
+       
+
+               <table border=1  color="black" align="center" >
+          <tr>  
+        <th> Student Name </th>
+        <th> Roll No </th>
+        <th> Class </th>
+        <th> Mother Name </th>
+        <th> Gender </th>
+        <th> Gr No </th>
+        <th> Religion </th>
+        <th> Date Of Admission </th>
+        <th> Date of Birth </th>
+        <th> Adhar No </th>
+        <th> Mobile No </th>
+        {% comment %} <th> Student Id </th> {% endcomment %}
+          </tr> 
+        
+        {% for aentry in adata %}
+        <tr>
+  <td align="center"> {{ aentry.sname }} </td>        
+  <td align="center"> {{ aentry.rollno }} </td>
+  <td align="center"> {{ aentry.classes }} </td>
+  <td align="center"> {{ aentry.mothername }} </td>
+  <td align="center"> {{ aentry.gender }} </td>
+  <td align="center"> {{ aentry.grno }} </td>
+  <td align="center"> {{ aentry.religion }} </td>
+  <td align="center"> {{ aentry.doa }} </td>
+  <td align="center"> {{ aentry.dob }} </td>
+  <td align="center"> {{ aentry.adharno }} </td>
+  <td align="center"> {{ aentry.mobileno }} </td>
+  {% comment %} <td align="center"> {{ entry.student_id }} </td> {% endcomment %}
+        </tr>
+        {% endfor %}
+   <td align="center"> 
+      <a href = {% url 'adm' %}>TAKE ADMISSION </a>
+    </td>
+    </table>
+    </div>
+            <div>
+              <h3><center><font color="red"></font> </h3></center>
+              <hr color="green">
+              <h4> <center> <b><i>STUDENT INFO </i></b></center> </h4>
+             
+    
+                     <table border=1  color="red" align="center" >
+                    <tr>
+                      
+              <th> Student Name </th>
+              <th> Class </th>>
+              <th> Division </th>
+              <th> Roll No </th>
+              <th> Address </th>
+              <th> Taluka </th>
+              <th> District </th>
+              <th> State </th>
+              <th> Pincode </th>
+                     </tr>
+     
+    
+              
+    
+                    {% for entry in sdata %}
+                    <tr>
+                      
+              <td align="center"> {{ entry.sname }} </td>
+              <td align="center"> {{ entry.classes }} </td>
+              <td align="center"> {{ entry.division }} </td>
+              <td align="center"> {{ entry.rollno }} </td>
+              <td align="center"> {{ entry.address }} </td>
+              <td align="center"> {{ entry.taluka }} </td>
+              <td align="center"> {{ entry.district }} </td>
+              <td align="center"> {{ entry.state }} </td>
+              <td align="center"> {{ entry.pincode }} </td>
+                 </tr>
+                        
+                {% endfor %}
+                <td align="center"> 
+                  <a href = {% url 'stu' %}>ADD STUDENT INFO </a>
+                </td>
+                </table>
+                </div>
+                <br>
+            <div>
+                <table border=1  color="red" align="center" >
+                <h3><center><font color="red"></font> </h3></center>
+                <hr color="green">
+                <h4> <center> <b><i>MARK INFO </i></b></center> </h4>
+               
+      
+                       <table border=1  color="red" align="center" >
+                  <tr> 
+                <th> Student Name </th> 
+                <th> Class </th>
+                <th> Division </th>
+                <th> Roll No </th>
+                <th> Subject </th>
+                <th> Marks </th>
+                <th> Year </th>
+                  </tr> 
+                
+                {% for mentry in mdata %}
+                <tr>
+          <td align="center"> {{ mentry.sname }} </td>
+          <td align="center"> {{ mentry.classes }} </td>
+          <td align="center"> {{ mentry.division }} </td>
+          <td align="center"> {{ mentry.rollno }} </td>        
+          <td align="center"> {{ mentry.subject }} </td>
+          <td align="center"> {{ mentry.mark }} </td>
+          <td align="center"> {{ mentry.year }} </td>
+                </tr>
+                {% endfor %}
+          <td align="center"> 
+                <a href = {% url 'mar' %}>ADD MARKS INFO </a>
+          </td>
+          </table>
+          </div>
+            
+        </body>
+    </html>
+    
+    
+    
+    
